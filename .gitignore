@@ -1,0 +1,16 @@
+# Compiled Java bytecode
+*.class
+
+# Build and output artifacts
+out/
+bin/
+
+# IDE and Editor files
+.idea/
+*.iml
+.vscode/
+
+# Operating System specific files
+.DS_Store
+Thumbs.db
+desktop.ini
