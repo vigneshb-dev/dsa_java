@@ -39,24 +39,62 @@ Designed for disciplined practice, conceptual mastery, and structured interview 
 ├── notes/
 ├── data-structures/
 │   ├── 01-arrays/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 02-strings/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 03-matrix-2d-arrays/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 04-linked-list/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 05-stack/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 06-queue-deque/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 07-hashing/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 08-binary-tree/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 09-binary-search-tree/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 10-balanced-trees/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 11-heap-priority-queue/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 12-trie/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 13-graph-representation/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 14-union-find/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 15-segment-tree/
+│   │   ├── README.md
+│   │   └── implementation/
 │   ├── 16-fenwick-tree/
+│   │   ├── README.md
+│   │   └── implementation/
 │   └── 17-design-problems/
+│       ├── README.md
+│       └── implementation/
 └── algorithms/
     ├── 01-complexity-analysis/
+    │   ├── README.md
+    │   ├── easy/
+    │   ├── medium/
+    │   └── hard/
     ├── 02-sorting/
     ├── 03-searching/
     ├── 04-recursion/
@@ -71,6 +109,7 @@ Designed for disciplined practice, conceptual mastery, and structured interview 
     ├── 13-cyclic-sort/
     ├── 14-greedy/
     ├── 15-dynamic-programming/
+    │   ├── README.md
     │   ├── 1d/
     │   ├── 2d-grid/
     │   ├── knapsack/
@@ -80,6 +119,7 @@ Designed for disciplined practice, conceptual mastery, and structured interview 
     │   └── tree-dp/
     ├── 16-tree-algorithms/
     ├── 17-graph-algorithms/
+    │   ├── README.md
     │   ├── traversal/
     │   ├── shortest-path/
     │   ├── minimum-spanning-tree/
@@ -95,17 +135,14 @@ Designed for disciplined practice, conceptual mastery, and structured interview 
 
 ## How to Use This Repo
 
-1. **Where to add a new problem:**
-   - Locate the relevant topic folder under `data-structures/` or `algorithms/`.
-   - Place your file inside the appropriate difficulty subfolder (`easy/`, `medium/`, or `hard/`).
-   - For `15-dynamic-programming` and `17-graph-algorithms`, place the file directly inside the target sub-topic folder (e.g., `algorithms/15-dynamic-programming/knapsack/`).
+1. **Where things live:**
+   - `data-structures/`: Holds theory documentation (`README.md`) and your own custom data structure implementations inside `implementation/` (e.g. `MyArrayList.java`).
+   - `algorithms/`: Practice problems live here categorized by technique, placed inside the matching difficulty folder (`easy/`, `medium/`, or `hard/`). For sub-topics in `15-dynamic-programming` and `17-graph-algorithms`, practice problems live directly inside the respective sub-topic folder under its difficulty subfolders.
 
 2. **Rule for choosing between `data-structures/` and `algorithms/`:**
-   - **Put it where the main idea is.**
-   - If the core breakthrough is implementing, manipulating, or choosing a specialized data structure (e.g., Trie, Disjoint Set, Min-Stack, LRU Cache, Binary Search Tree), place it under `data-structures/`.
-   - If the core breakthrough is an algorithmic strategy or paradigm (e.g., Sliding Window, Binary Search on Answer, Dynamic Programming, Greedy, Two Pointers), place it under `algorithms/`.
+   - `data-structures/` holds theory (`README.md`) and your own implementations (`implementation/`). Practice problems live in `algorithms/` by technique, in the matching difficulty folder.
 
-3. **How to choose the difficulty subfolder:**
+3. **How to choose the difficulty subfolder (in `algorithms/`):**
    - Follow the official platform difficulty tag (LeetCode / Codeforces / HackerRank).
    - Alternatively, categorize by conceptual depth:
      - `easy/`: Single-step operations, direct standard library usage, trivial loops.
@@ -113,18 +150,38 @@ Designed for disciplined practice, conceptual mastery, and structured interview 
      - `hard/`: Subtle edge-case bounds, optimal state reductions, multi-layer algorithms.
 
 4. **Updating progress:**
-   - Make it a habit to update the topic's `README.md` problem table (marking `[x]`) and log your progress in [PROGRESS.md](PROGRESS.md) immediately after completing each problem.
+   - Make it a habit to update the topic's `README.md` problem table (marking `[x]`) and log your progress in [PROGRESS.md](PROGRESS.md) immediately after completing each problem or implementation.
 
 ## Naming Conventions
 
+- **Implementations in data-structures:** `My<Name>.java`  
+  *Example:* `MyMinHeap.java`, `MyArrayList.java`
 - **Problems:** `P<4-digit-number>_PascalCaseTitle.java`  
   *Example:* `P0003_LongestSubstringWithoutRepeating.java`
-- **Own implementations:** `My<Name>.java`  
-  *Example:* `MyMinHeap.java`
 - **Templates:** `<Name>Template.java`  
   *Example:* `BinarySearchTemplate.java`
 - **Class Name:** The public class name must match the file name exactly.
 - **No Package Declarations:** Keep files as plain Java (`.java`) without `package` statements for immediate compilation.
+
+## How Each Topic README is Organized
+
+### Data Structure READMEs
+1. **Fundamentals:** Definition, problem solved, stored data type, linear/non-linear, static/dynamic, ordering, mutability in Java, and internal memory layout diagram.
+2. **Core Operations:** Detailed steps, Best/Average/Worst time and space tables for Insert, Delete, Search, Access, Update, Traverse, and Sort, followed by a consolidated operations summary table.
+3. **Variations:** Standard version trade-offs, important variants comparison table, implementation approaches comparison table, and Java built-in equivalents.
+4. **Implementation:** Tracker table for custom `My<Name>.java` classes in `implementation/`.
+5. **Navigation:** Clickable links to Main README, Progress tracker, and adjacent topics.
+
+### Algorithm READMEs
+1. **Overview & Input/Output & Constraints:** Problem family, concrete I/O examples, and input constraint bounds.
+2. **Brute-Force vs Optimal Approach:** Naive baseline vs reusable commented Java skeleton, with explicit **5A breakdown** (work eliminated, cases skipped, shortcuts used, time saved, space effect, trade-offs).
+3. **Core Idea & Pattern:** Central intuition, pattern name, and recognition signals.
+4. **Data Structures & Invariants:** Auxiliary structures and induction/loop invariants.
+5. **Dry Run & Edge Cases:** Step-by-step state table trace and common failure modes.
+6. **Correctness & Complexity:** Proof argument, detailed time complexity derivations, and auxiliary space analysis.
+7. **Optimization & Usage Guidance:** Lower-bound optimality, when to use (4-6 bullets), and when NOT to use (3-5 bullets with better alternatives).
+8. **Problems & Navigation:** Practice problem tracking table and navigation links.
+*(Folders covering several named algorithms additionally include a comparison table and condensed sub-sections for each named technique).*
 
 ## File Template
 
